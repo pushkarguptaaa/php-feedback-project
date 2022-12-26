@@ -1,4 +1,4 @@
-<?php include './inc/header.php' ?>
+<?php include './inc/header.php'; ?>
         <img src="/feedback_project/img/Pushkar.png" class="w-25 mb-3" alt="" />
         <h2>Feedback</h2>
         <p class="lead text-center">Leave feedback for Pushkar Media</p>
@@ -41,4 +41,4 @@
             />
           </div>
         </form>
-<?php include './inc/footer.php' ?>        
+<?php include './inc/footer.php'; ?>        
