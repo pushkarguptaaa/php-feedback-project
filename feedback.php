@@ -1,26 +1,9 @@
 <?php include './inc/header.php'; ?>
 
 <?php  
-$feedback = [
-  [
-    'id' => '1',
-    'name' => 'Beth Williams',
-    'email' => 'beth@gmail.com',
-    'body' => 'Pushkar Media is ok'
-  ],
-  [
-    'id' => '2',
-    'name' => 'Ram Sharma',
-    'email' => 'ram@gmail.com',
-    'body' => 'Pushkar Media is excellent'
-  ],
-  [
-    'id' => '3',
-    'name' => 'Brad Pitt',
-    'email' => 'brad@gmail.com',
-    'body' => 'Pushkar Media is bad'
-  ]
-]
+  $sql = 'SELECT * FROM feedback';
+  $result = mysqli_query($conn,$sql);
+  $feedback = mysqli_fetch_all($result,MYSQLI_ASSOC);
 ?>
 
         <h2>Past Feedback</h2>
@@ -34,7 +17,7 @@ $feedback = [
           <div class="card-body text-center">
             <?php echo $item['body']; ?>
             <div class="text-secondary mt-2">
-              By <?php echo $item['name']; ?>
+              By <?php echo $item['name']; ?> on <?php echo $item['date']; ?>
             </div>
           </div>
         </div>
